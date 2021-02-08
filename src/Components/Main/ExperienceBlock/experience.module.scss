@@ -1,0 +1,90 @@
+@import "../../../helper/mixin";
+
+.experienceBlock{
+  max-width: 90%;
+  width: 100%;
+  @include flex-center();
+  flex-direction: column;
+  margin: auto;
+  & .experienceBlock__title{
+    width: 100%;
+    margin-bottom: 50px;
+    & .experienceBlock__title_bold{
+      text-align: left;
+      @include font-setter(normal,bold, 62px, 65px,#16293D);
+    }
+  }
+  & .experienceBlock__list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 30px;
+  }
+}
+
+.experience{
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  @include flex-start();
+  min-height: 150px;
+  & .experience__left{
+    width: 300px;
+    padding: 15px 30px 15px 0;
+    box-sizing: border-box;
+    & .dateBlock{
+      @include flex-space-center();
+      & .dateBlock__month{
+        @include font-setter(normal,bold,16px, 19px, #657887);
+        text-transform: uppercase;
+      }
+      & .dateBlock__year{
+        @include font-setter(normal,bold, 36px,39px, #64C3FA);
+        & .dateBlock__year_small{
+          font-size: 32px;
+        }
+      }
+    }
+    & .workInfo{
+      padding-top: 15px;
+      margin-top: 15px;
+      width: 100%;
+      position: relative;
+      text-align: right;
+      &:after{
+        content: '\A';
+        position: absolute;
+        width: 140px;
+        height: 2px;
+        background: #657887;
+        opacity: 0.4;
+        top: 0;
+        right: 0;
+      }
+      & .workInfo__position{
+        @include font-setter(normal,bold,20px, 24px, #16293D);
+        text-transform: uppercase;
+      }
+      & .workInfo__info{
+        margin-top: 8px;
+        @include font-setter(normal,normal,13px, 16px, #657887);
+
+      }
+    }
+  }
+  & .workDescription{
+    border-left: 1px solid #657887;
+    height: 100%;
+    text-align: left;
+    padding: 15px 0 15px 30px;
+    & .workDescription__title{
+      @include font-setter(normal,bold,20px, 24px, #16293D);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    & .workDescription__text{
+      @include font-setter(normal,normal,16px, 19px, #16293D);
+
+    }
+  }
+}

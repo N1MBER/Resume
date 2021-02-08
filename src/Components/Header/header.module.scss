@@ -1,0 +1,62 @@
+@import '../../helper/mixin';
+
+.header{
+  width: 100%;
+  height: 60px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  @include flex-space-center();
+  background: rgba(22,41,61,0.9);
+
+  & .header__title{
+    @include clear();
+    @include flex-center();
+    cursor: pointer;
+    & .header__title_bold{
+      @include font-setter(nornal,bold, 32px,36px,#FFF);
+    }
+    & .imageContainer{
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-right: 20px;
+      & .imageContainer__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  & .header__menu{
+    width: 100%;
+    max-width: 50%;
+    @include flex-center();
+    justify-content: flex-end;
+    & > button{
+      margin-right: 20px;
+    }
+    & > button:last-child{
+      margin-right: 0px;
+    }
+  }
+  & .menuButton{
+    @include clear();
+    cursor: pointer;
+    position: relative;
+    & .menuButton__text{
+      @include font-setter(nornal,bold, 18px,21px,#FFF);
+      position: absolute;
+      margin: auto;
+    }
+    &:hover .menuButton__text:not(.hiddenText){
+      font-size: 17px;
+      text-shadow:  0 0 1em #FFF; /* Параметры тени */
+    }
+
+    .hiddenText{
+      opacity: 0;
+      position: relative;
+    }
+  }
+}

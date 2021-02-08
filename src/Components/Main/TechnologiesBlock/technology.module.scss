@@ -1,0 +1,52 @@
+@import '../../../helper/mixin';
+
+.technologiesBlock{
+  max-width: 90%;
+  width: 100%;
+  margin: auto;
+  margin-top: 70px;
+  & .technologiesBlock__title{
+    text-align: left;
+    @include font-setter(normal,bold, 62px, 65px,#16293D);
+  }
+  & .technologiesBlock__list{
+    margin-top: 30px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: calc(50% - 30px) calc(50% - 30px);
+    grid-row-gap: 30px;
+    width: 100%;
+    grid-column-gap: 60px;
+  }
+
+}
+
+.technology{
+  width: 100%;
+  margin-bottom: 50px;
+  & .technology__title{
+    @include font-setter(normal,bold,18px, 21px, #16293D);
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  & .rateBlock{
+    @include flex-space-center();
+    & > div{
+      margin-right: 10px;
+    }
+    & > div:last-child{
+      margin-right: 0;
+    }
+    flex-wrap: nowrap;
+    & .rateBlock__line{
+      height: 4px;
+      width: 100%;
+      background: #E0E7EE;
+      border-radius: 4px;
+      &.blueLine{
+        background: #61dafb;
+      }
+
+    }
+  }
+}

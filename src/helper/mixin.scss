@@ -1,0 +1,64 @@
+
+
+@mixin flex-space-center(){
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin clear(){
+  background: none;
+  border: none;
+}
+@mixin flex-center(){
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexible-row(){
+  flex-direction: row;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+}
+@mixin border-radius($radius){
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+@mixin flex-start(){
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+@mixin font-setter($style,$weight,$size,$height,$color){
+  font-family: 'Montserrat', sans-serif;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin pink-hover(){
+  box-shadow: 0px 10px 40px rgba(233, 61, 109, 0.4), 0px 0px 0px 4px rgba(233, 61, 109, 0.4);
+}
+
+@mixin gray-hover(){
+  box-shadow: inset 0 0 0 4px rgba(75, 99, 141, 0.4);
+}
