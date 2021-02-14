@@ -6,8 +6,10 @@
   padding: 0 30px;
   box-sizing: border-box;
   @include flex-space-center();
+  position: fixed;
+  top: 0;
+  z-index: 40;
   background: rgba(22,41,61,0.9);
-
   & .header__title{
     @include clear();
     @include flex-center();
@@ -44,6 +46,11 @@
     @include clear();
     cursor: pointer;
     position: relative;
+    &.activeButton{
+      & .menuButton__text{
+        color: #3480F3;
+      }
+    }
     & .menuButton__text{
       @include font-setter(nornal,bold, 18px,21px,#FFF);
       position: absolute;

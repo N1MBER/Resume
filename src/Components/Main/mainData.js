@@ -15,6 +15,17 @@ import Tonex3 from '../../assets/image/Projects/Tonex3.png';
 import PMB1 from '../../assets/image/Projects/PMB1.png';
 import PMB2 from '../../assets/image/Projects/PMB2.png';
 
+import html_icon from '../../assets/image/technologies/1024px-HTML5_logo_and_wordmark.svg.png';
+import css_icon from '../../assets/image/technologies/img_545599.png';
+import sass_icon from '../../assets/image/technologies/sass-6244.png';
+import react_icon from '../../assets/image/technologies/68747470733a2f2f7261776769742e636f6d2f676f72616e67616a69632f72656163742d69636f6e732f6d61737465722f72656163742d69636f6e732e737667.svg';
+import react_native_icon from '../../assets/image/technologies/1280px-React-icon.svg.png';
+import java_icon from '../../assets/image/technologies/213044_9c5068fb538a43fa8c84497b91927c2e.png';
+import python_icon from '../../assets/image/technologies/1024px-Python-logo-notext.svg.png';
+import redux_icon from '../../assets/image/technologies/redux-283024.png';
+import sql_icon from '../../assets/image/technologies/sql-file-format.svg';
+import git_icon from '../../assets/image/technologies/Git_icon.svg.png';
+
 import React from 'react';
 import style from './ImageSlider/image_slider.module.scss';
 
@@ -132,41 +143,51 @@ export const TechnologySkills = [
     {
         title: 'HTML',
         rate: 90,
+        icon: html_icon
     },
     {
         title: 'CSS',
         rate: 90,
+        icon: css_icon
     },
     {
         title: 'React-Native',
         rate: 60,
+        icon: react_native_icon
     },
     {
         title: 'ReactJS',
         rate: 75,
+        icon: react_icon
     },
     {
         title: 'SASS/SCSS',
         rate: 90,
+        icon: sass_icon
     },
     {
         title: 'GIT',
         rate: 80,
+        icon: git_icon
     },
     {
         title: 'Redux',
         rate: 80,
+        icon: redux_icon
     },
     {
         title: 'Java',
         rate: 70,
+        icon: java_icon
     },
     {
         title: 'Python',
         rate: 60,
+        icon: python_icon
     },
     {
         title: 'SQL (PostgreSQL)',
         rate: 60,
+        icon: sql_icon
     },
 ]

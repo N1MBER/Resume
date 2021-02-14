@@ -13,7 +13,7 @@ const TechnologiesBlock = ({skills,...props}) => {
     )
 }
 
-const TechnologyRate = ({title,rate, ...props}) => {
+const TechnologyRate = ({title,rate,icon, ...props}) => {
     const [countRate, setCountRate] = useState(0);
 
     const getCountRate = (rate_percent) => {
@@ -38,7 +38,12 @@ const TechnologyRate = ({title,rate, ...props}) => {
 
     return(
         <div className={style.technology}>
-            <p className={style.technology__title}>{title}</p>
+            <div className={style.technology__title}>
+                <div className={style.imageContainer}>
+                    <img className={style.imageContainer__image} src={icon}/>
+                </div>
+                <p className={style.textBlock}>{title}</p>
+            </div>
             <div className={style.rateBlock}>
                 {[1,2,3,4,5].map((item, index) =>
                     <div className={classnames(style.rateBlock__line, {
