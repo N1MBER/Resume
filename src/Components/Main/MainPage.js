@@ -5,6 +5,7 @@ import SkillsBlock from "./SkillsBlock/SkillsBlock";
 import ExperienceBlock from "./ExperienceBlock/ExperienceBlock";
 import ProjectBlock from "./ProjectBlock/ProjectBlock";
 import TechnologiesBlock from "./TechnologiesBlock/TechnologiesBlock";
+import AnimationBlock from "./AnimationBlock/AnimationBlock";
 
 const MainPage = ({...props}) => {
     return(
@@ -14,6 +15,7 @@ const MainPage = ({...props}) => {
             <ExperienceBlock/>
             <ProjectBlock/>
             <TechnologiesBlock skills={TechnologySkills}/>
+            <AnimationBlock/>
         </main>
     )
 }
