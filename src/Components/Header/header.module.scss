@@ -66,4 +66,49 @@
       position: relative;
     }
   }
+  .header__button{
+    @include clear();
+    @include flex-center();
+    display: none;
+    height: 60px;
+    width: 60px;
+    z-index: 2000;
+  }
+}
+
+
+
+
+
+@media all and (max-width: 900px) {
+  .header__menu{
+    position: absolute;
+    top: -260px;
+    right: 0;
+    opacity: 0;
+    flex-direction: column;
+    width: auto!important;
+    text-align: left;
+    align-items: flex-start !important;
+    background: rgba(22,41,61,0.9);
+    padding: 20px;
+    transition: all 0.4s ease-in;
+  }
+  .visibleMenu{
+    top: 60px;
+    opacity: 1;
+  }
+  .header__button{
+    display: flex !important;
+  }
+  .menuButton{
+    text-align: left;
+  }
+}
+
+@media all and (max-width: 400px) {
+    .header__button svg{
+      width: 30px !important;
+      height: 30px !important;
+    }
 }

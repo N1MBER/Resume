@@ -41,6 +41,11 @@ body::-webkit-scrollbar-track{
   flex-wrap: wrap;
   height: 600px;
 }
+@media all and (max-width: 750px) {
+  .react-slideshow-fade-images-wrap{
+    height: 700px !important;
+  }
+}
 .react-slideshow-fade-images-wrap > div{
   position: absolute;
   left: 0 !important;

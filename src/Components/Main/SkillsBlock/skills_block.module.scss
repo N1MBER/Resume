@@ -135,3 +135,41 @@
   }
 }
 
+@media all and (max-width: 1600px) {
+  .skillsDescription{
+    padding: 0 !important;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .skillsDescription__list{
+    grid-template-columns: 100% !important;
+    padding: 0!important;
+  }
+  .infoBlock__text{
+    max-width: 100% !important;
+  }
+}
+
+
+@media all and (max-width: 900px) {
+  .skills{
+    flex-direction: column;
+  }
+  .skillsDescription{
+    width: 100% !important;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .skillsPerson__title{
+    font-size: 50px!important;
+    line-height: 55px !important;
+  }
+  .photoContainer{
+    width: 280px !important;
+  }
+  .skillsDescription__info_image{
+    height: 80px !important;
+  }
+}

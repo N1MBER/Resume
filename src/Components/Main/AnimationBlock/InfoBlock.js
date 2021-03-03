@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import style from './animation.module.scss';
 import classnames from 'classnames';
 

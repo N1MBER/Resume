@@ -30,7 +30,7 @@ const menuID = ['main', 'skills', 'experience', 'projects', 'technologies'];
 
 const Header = ({...props}) => {
     const [activePosition, setActivePosition] = useState('')
-
+    const [visibleMenu,setVisibleMenu] = useState(false);
     const scrollToBlock = (id) => {
         let block = document.getElementById(id);
         if (block){
@@ -71,7 +71,12 @@ const Header = ({...props}) => {
                 </div>
                 <p className={style.header__title_bold}>N1MBER</p>
             </button>
-            <div className={style.header__menu}>
+            <button className={style.header__button} onClick={() => setVisibleMenu(!visibleMenu)}>
+                {MenuIcon}
+            </button>
+            <div className={classnames(style.header__menu, {
+                [style.visibleMenu]: visibleMenu
+            })}>
                 {MenuArr.map(item => {
                     return(
                         <button className={classnames(style.menuButton, {
@@ -90,5 +95,13 @@ const Header = ({...props}) => {
         </header>
     )
 }
+
+const MenuIcon = (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="4" rx="1" fill="#FFF"/>
+        <rect y="12" width="40" height="4" rx="1" fill="#FFF"/>
+        <rect y="24" width="40" height="4" rx="1" fill="#FFF"/>
+    </svg>
+)
 
 export default Header;

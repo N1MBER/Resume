@@ -32,7 +32,8 @@ import style from './ImageSlider/image_slider.module.scss';
 export const Slider_data = [
     {
         image: Image4,
-        title: <p className={style.sliderInfo__title}>Колесников Максим Витальевич</p>
+        title: <p className={style.sliderInfo__title}>Колесников Максим Витальевич</p>,
+        text:  <div className={style.sliderInfo__text}/>
     },
     {
         image: Image1,
