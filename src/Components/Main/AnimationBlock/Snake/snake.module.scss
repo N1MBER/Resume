@@ -2,7 +2,7 @@
    z-index: 3;
   position: relative;
   display: flex;
-  width: 800px;
+  //width: 800px;
   align-items: flex-end;
   justify-content: flex-end;
 }
@@ -132,4 +132,13 @@
     width: 13px;
     right: -11px;
   }
+}
+
+
+@media all and (max-width: 900px){
+    .snakeContainer{
+      transform: scale(0.8);
+      justify-content: center;
+      //width: auto;
+    }
 }

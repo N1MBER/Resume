@@ -29,6 +29,30 @@ import git_icon from '../../assets/image/technologies/Git_icon.svg.png';
 import React from 'react';
 import style from './ImageSlider/image_slider.module.scss';
 
+const getAge = () => {
+    let now = new Date(); //Текущя дата
+    let today = new Date(now.getFullYear(), now.getMonth(), now.getDate()); //Текущя дата без времени
+    let dob = new Date(2000, 11, 25); //Дата рождения
+    let dobnow = new Date(today.getFullYear(), dob.getMonth(), dob.getDate()); //ДР в текущем году
+    let age; //Возраст
+    age = today.getFullYear() - dob.getFullYear();
+    if (today < dobnow) {
+        age = age-1;
+    }
+    return age;
+}
+
+const analyzeAge = (age) => {
+    switch (age % 10){
+        case 1:
+            return `${age} год`;
+        case 2:
+            return `${age} года`;
+        default:
+            return `${age} лет`;
+    }
+}
+
 export const Slider_data = [
     {
         image: Image4,
@@ -40,7 +64,7 @@ export const Slider_data = [
         title: <p className={style.sliderInfo__title}>Коротко о себе</p>,
         text: <div className={style.sliderInfo__text}>
             <p className={style.sliderInfo__text_normal}><b>Специализация:</b> Front-end React Developer, Mobile React-Native Developer</p>
-            <p className={style.sliderInfo__text_normal}><b>Возраст:</b> 20 лет</p>
+            <p className={style.sliderInfo__text_normal}><b>Возраст:</b> {analyzeAge(getAge())}</p>
         </div>
     },
     {

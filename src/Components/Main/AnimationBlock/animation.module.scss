@@ -1,7 +1,7 @@
 @import '../../../helper/mixin';
 
 .animationBlock{
-  height: 400px;
+  min-height: 400px;
   position: relative;
   width: 100%;
   display: flex;
@@ -84,4 +84,41 @@
   0%{background-position:96% 0%}
   50%{background-position:5% 100%}
   100%{background-position:96% 0%}
+}
+
+
+@media all and (max-width: 1300px) {
+  .infoBlock{
+    width: 250px;
+    height: 250px;
+    &:after{
+      width: 300px;
+      height: 190px;
+    }
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .animationBlock{
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: space-between;
+    min-height: 500px;
+    flex-direction: column-reverse;
+    //max-width: 1100px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .animationBlock{
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: space-between;
+    min-height: 500px;
+    flex-direction: column-reverse;
+    //max-width: 1100px;
+
+  }
 }
